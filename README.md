@@ -1,4 +1,8 @@
 # MapReduce
+Objective: Produce a seperate file for each brand with brand wise list of top 10 reviewed products
+
+Implementation:
+
 Mapreduce concepts- Secondary sort, counters, mutiple mapreduce jobs
 
 This application produces brand wise list of top 10 reviewed products.
@@ -19,3 +23,24 @@ I have made use of Secondary sort, counters, mutiple mapreduce concepts in hadoo
 Below is the command used to execute Mapreduce job:
 
 hadoop jar ProductRatings.jar nordStorm.productRatings.SecondarySort.ProductReviewCountDriver data/productRatingsDir output
+
+Output:
+
+hadoop fs -cat output2/part-r-00000
+0	Amazon||Amazon Tap - Alexa-Enabled Portable Bluetooth Speaker||542
+1	Amazon||Amazon Fire TV||166
+2	Amazon||Amazon Premium Headphones||133
+3	Amazon||Fire HD 6 Tablet||87
+4	Amazon||"Kindle Fire HDX 7"""||70
+5	Amazon||"Kindle Fire HDX 8.9"""||43
+6	Amazon||"Kindle Fire HD 7"""||41
+7	Amazon||Kindle Paperwhite||39
+8	Amazon||Certified Refurbished Amazon Fire TV (Previous Generation - 1st)||38
+9	Amazon||Kindle Keyboard||32
+10	Amazon||All-New Amazon Fire 7 Tablet Case (7th Generation||27
+
+hadoop fs -cat output2/part-r-00001
+0	Moshi||Moshi Anti-Glare No Bubble Screen Protector for the Fire Phone||12
+1	Moshi||Moshi Fire TV||10
+2	Moshi||Moshi Premium Headphones||7
+3	Moshi||Fire HD 6 Tablet||1
